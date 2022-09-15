@@ -1,9 +1,10 @@
+import { FaBars } from 'react-icons/fa';
+import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
-import {NavLink as Link} from 'react-router-dom';
 
 export const Nav = styled.nav`
 background: #ff0000d6;
-padding: 2rem;
+padding: 1rem;
 width: 100%;
 color: #ff0000d6;
 background-color: whitesmoke;
@@ -16,51 +17,117 @@ cursor: pointer;
 export const LogoBox = styled.div`
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 font-weight: 200;
-position: absolute;
-left: 3rem;
+font-size: 1.4rem;
 
 img{
     transform: scale(0.7);
 }
+`;
 
-&::after{
+export const NavLink = styled(Link)`
+  color: #808080;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 1rem 1rem;
+  height: 100%;
+  font-size: 1.4rem;
+  position: relative;
+  cursor: pointer;
+  &.active {
+    color: #000000;
+  }
+  &::after{
     content: "";
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 2px;
     height: 100%;
     background-color: orangered;
-    width: 2rem;
+    width: 0;
     height: 3px;
     border-radius: 3px;
     color: lavender;
     font-size: 3.3rem;
 }
 &:hover::after{
-    width: 100%;
+    width: 90%;
     transition: 0.4s;
 }
 `;
-
-export const NavLink = styled(Link)`
-color: #fff;
-font-size: 2rem;
-display: flex;
-justify-content: center;
-align-items: center;
-cursor: pointer;
-text-decoration: none;
-
-@media screen and (max-width: 400px) {
+  
+export const Bars = styled(FaBars)`
+  display: none;
+  color: #808080;
+  @media screen and (max-width: 768px) {
+    display: block;
     position: absolute;
-    top: 10px;
-    left: 25px;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 80%);
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+`;
+  
+export const NavMenu = styled.div`
+  display: flex;
+  align-items: center;
+  /* Second Nav */
+  /* margin-right: 24px; */
+  /* Third Nav */
+  /* width: 100vw;
+  white-space: nowrap; */
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+  
+export const NavBtn = styled.nav`
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+  /* Third Nav */
+  /* justify-content: flex-end;
+  width: 100vw; */
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+  
+export const NavBtnLink = styled(Link)`
+  padding: 10px 22px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #fff;
+    outline: 1px solid #f26c4f;
+    position: relative;
+    overflow: hidden;
+    transition: color 1s;
+    background-color: #f26c4f;
+    z-index: 1;
+  /* Second Nav */
+  margin-left: 24px;
+  &:hover {
+    color: whitesmoke;
+    outline: none;
+    transition: background 1s;
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -32px;
+    width: 0;
+    height: 100%;
+    background-color: red;
+    transform: skew(40deg);
+    z-index: -1;
+    transition: width 1s;
+}
+&:hover::before{
+    width: 200%;
 }
 `;
-
-
-
-// export const Bars = styled(FaPizzaSlice)`
-// font-size: 2rem;
-// transform: translate(-50%, -15%);
-// `
