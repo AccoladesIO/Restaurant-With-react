@@ -14,7 +14,9 @@ export const Grid = styled.div`
     z-index: 1;
     gap: 2rem;
     margin-top: 2rem;
-    
+    @media screen and (max-width: 428px){
+            grid-template-columns: 1fr;
+    }
     
     .cell{
     background: linear-gradient(to right, #ff0000d6, #ff4500e6), url(${Imgbg});
@@ -24,6 +26,9 @@ export const Grid = styled.div`
     border-radius: 5px;
     position: relative;
     box-shadow: none;
+    @media screen and (max-width: 428px){
+            grid-column: 1;
+    }
 }
 `;
 
