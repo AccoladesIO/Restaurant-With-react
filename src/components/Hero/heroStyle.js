@@ -20,19 +20,17 @@ text-align: center;
 h1{
     font-size: 5rem;
     text-align: center;
+    @media screen and (max-width: 600px){
+            font-size: 4rem;
+    }
 }
 h2{
     font-size: 3rem;
 }
-@media screen and (max-width: 400px){
-    h1{
-        font-size: 3rem;
-    }
-}
 `;
 export const Btn = styled.button`
 margin-top: 2rem;
-font-size: 25px;
+font-size: 2.4rem;
 border: none;
 text-decoration: none;
 text-transform: uppercase;
@@ -66,6 +64,10 @@ z-index: 1;
 &:hover::before{
     width: 200%;
 }
+@media screen and (max-width: 600px){
+            font-size: 1.6rem;
+            padding: 15px 30px;
+    }
 `
 export const Circle = styled.div`
     width: 4rem;
