@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { LogoBox } from "./NavbarElements";
 import {
   Nav,
@@ -11,6 +11,10 @@ import {
 import LogoImg from "../../image/logo.svg";
 
 const Navbar = () => {
+  const [mobile, setMobile] = useState(false);
+  const openNav = () =>{
+    setMobile(!mobile)
+  }
   return (
     <>
       <Nav>
