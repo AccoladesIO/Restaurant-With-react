@@ -10,7 +10,8 @@ export const GlobalStyle = createGlobalStyle`
 }
 body{
     background-color: white;
-
+    position: relative;
+    z-index: -1;
 }
 .section-featured{
     padding: 4.6rem;
