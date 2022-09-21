@@ -9,20 +9,18 @@ import {
   NavBtnLink,
 } from "./NavbarElements";
 import LogoImg from "../../image/logo.svg";
+import Sidebar from "../Sidebar/sidebar";
 
 const Navbar = () => {
   const [mobile, setMobile] = useState(false);
-  const openNav = () =>{
-    setMobile(!mobile)
-  }
   return (
     <>
+          <Sidebar open={mobile} onClose={() => setMobile(false)}/>
       <Nav>
         <LogoBox>
           <img src={LogoImg} alt="FoodBoard Logo" />
         </LogoBox>
-        <Bars />
-
+        <Bars onClick={() => setMobile(true)}/>
         <NavMenu>
           <NavLink to="/" activeStyle>
             Home
