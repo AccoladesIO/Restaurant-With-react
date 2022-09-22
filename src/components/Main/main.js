@@ -1,19 +1,24 @@
-import React from 'react'
-import { Grid, GridWrap, Wrap } from './mainStyles'
+import React from "react";
+import { Grid, GridWrap, Wrap } from "./mainStyles";
+import { CreditCard } from "./mainStyles";
 
 const Main = () => {
   return (
     <GridWrap>
-        <Grid>
-        <Wrap/>
-        <Wrap/>
-        <Wrap className='cell'/>
-        <Wrap/>
-        <Wrap/>
-    </Grid>
+      <Grid>
+        <Wrap>
+          <CreditCard />
+          <h2>Pay Online</h2>
+        </Wrap>
+        <Wrap>
+          <h2>Pay With Cash</h2>
+        </Wrap>
+        <Wrap className="cell" />
+        <Wrap></Wrap>
+        <Wrap></Wrap>
+      </Grid>
     </GridWrap>
-  )
-}
+  );
+};
 
-
-export default Main
+export default Main;

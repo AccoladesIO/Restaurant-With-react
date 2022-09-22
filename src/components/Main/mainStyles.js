@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Imgbg from '../../image/offerbgimg.jpg'
+import { FaCreditCard } from 'react-icons/fa';
 
 export const GridWrap = styled.div`
     width: 90%;
@@ -40,4 +41,17 @@ export let Wrap = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    box-shadow: 0px 0px 3px #333;
+
+    h2{
+        font-size:2.4rem;
+        color: #333;
+    }
 `
+export const CreditCard = styled(FaCreditCard)`
+  color: #fff;
+  font-size: 1.6rem;
+    display: block;
+    font-size: 1.4rem;
+    cursor: pointer;
+`;
