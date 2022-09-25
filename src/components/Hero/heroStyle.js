@@ -9,13 +9,17 @@ height: 80vh;
 max-width: 100%;
 color: white;
 position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
 `
 export const TextContent = styled.div`
-position: absolute;
+/* position: absolute;
 transform: translate(-50%, -50%);
 top: 50%;
-left: 50%;
+left: 50%; */
 text-align: center;
+max-height: 80vh;
 
 h1{
     font-size: 5rem;
@@ -29,15 +33,15 @@ h2{
 }
 `;
 export const Btn = styled.button`
-margin-top: 2rem;
-font-size: 2.4rem;
+margin: 2rem;
+font-size: 2rem;
 border: none;
 text-decoration: none;
 text-transform: uppercase;
 letter-spacing: 2px;
 color: #fff;
 outline: 1px solid #f26c4f;
-padding: 20px 40px;
+padding: 16px 30px;
 position: relative;
 overflow: hidden;
 transition: color 1s;

@@ -1,17 +1,31 @@
 import styled from "styled-components";
 import Imgbg from '../../image/offerbgimg.jpg'
-import { FaCreditCard } from 'react-icons/fa';
+import SectionImg from '../../image/grow-lazy.jpg'
+import { FaCreditCard, FaWallet } from 'react-icons/fa';
 
 export const GridWrap = styled.div`
     width: 90%;
     margin: auto;
+    background: url(${SectionImg});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    h2{
+        font-size:2.4rem;
+        color: #333;
+        margin-bottom: 6px;
+    }
+    h3{
+        font-size: 1.8rem;
+        color: #555;
+    }
 `
 
 export const Grid = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
-    height: 900px;
+    height: 700px;
     z-index: 1;
     gap: 2rem;
     margin-top: 2rem;
@@ -20,7 +34,7 @@ export const Grid = styled.div`
     }
     
     .cell{
-    background: linear-gradient(to right, #ff0000d6, #ff4500e6), url(${Imgbg});
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.2), black), url(${Imgbg});
     background-position: center;
     background-size: cover;
     grid-column: 1/3;
@@ -40,18 +54,38 @@ export let Wrap = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
     flex-direction: column;
     box-shadow: 0px 0px 3px #333;
 
-    h2{
-        font-size:2.4rem;
-        color: #333;
-    }
+    user-select: none;
+   
 `
 export const CreditCard = styled(FaCreditCard)`
-  color: #fff;
-  font-size: 1.6rem;
+    color: orangered;
+    font-size: 3rem;
     display: block;
-    font-size: 1.4rem;
+    font-size: 6rem;
+    padding: 1rem;
     cursor: pointer;
+    z-index: 1;
+    
+    &:hover{
+        transform: scale(1.2);
+        transition: all 0.4s ease-in-out;
+    }
+`;
+export const Wallet = styled(FaWallet)`
+    color: orangered;
+    font-size: 3rem;
+    display: block;
+    font-size: 6rem;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 1;
+    
+    &:hover{
+        transform: scale(1.2);
+        transition: all 0.4s ease-in-out;
+    }
 `;

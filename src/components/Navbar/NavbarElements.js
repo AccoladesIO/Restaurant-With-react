@@ -59,15 +59,22 @@ export const NavLink = styled(Link)`
   
 export const Bars = styled(FaBars)`
   display: none;
-  color: #000;
-  font-size: 1.6rem;
   @media screen and (max-width: 768px) {
+    font-size: 3rem;
+    color: orangered;
+    font-weight: bolder;
     display: block;
     position: absolute;
     top: 2rem;
-    right: 1rem;
+    right: 3rem;
     font-size: 1.4rem;
     cursor: pointer;
+    transform: scale(1.5);
+
+    &:hover{
+      transform: scale(1.4);
+      transition: all 0.4s ease-in-out;
+    }
   }
 `;
   

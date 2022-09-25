@@ -47,4 +47,40 @@ body{
         height: 2rem;
     }
 }
+
+    .bubble-wrapper{
+        width: 12rem;
+        height: 12rem;
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+
+        @keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+    }
+    .bubble-wrapper img{
+        width: 100%;
+        height: 100%;
+        animation: spin 1s linear infinite;
+    }
+
+    .lines{
+        width: 20rem;
+        height: 4px;
+        border-radius: 3px;
+        background-color: azure;
+        border: 1px solid orangered;
+        margin-bottom: 6px;
+    }
+    .line{
+        width: 8rem;
+        background-color: orangered;
+        height: 3px;
+    }
 `
