@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import Imgbg from '../../image/offerbgimg.jpg'
-import SectionImg from '../../image/grow-lazy.jpg'
+// import SectionImg from '../../image/grow-lazy.jpg'
 import { FaCreditCard, FaWallet } from 'react-icons/fa';
 
 export const GridWrap = styled.div`
     width: 90%;
     margin: auto;
-    background: url(${SectionImg});
+    background: lavender;
+    padding: 2rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -25,7 +26,7 @@ export const Grid = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
-    height: 700px;
+    height: 120vh;
     z-index: 1;
     gap: 2rem;
     margin-top: 2rem;
